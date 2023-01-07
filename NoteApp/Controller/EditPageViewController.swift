@@ -32,8 +32,8 @@ class EditPageViewController: UIViewController {
     
     // MARK:- Methods to implement
     private func updateNote() {
-        
-        note.lastUpdated = Date()
+        note.lastUpdate = Date()
+        CoreDataManager.shared.save()
         delegate?.refreshNotes()
     }
     

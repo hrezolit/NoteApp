@@ -1,18 +1,17 @@
 //
-//  Note.swift
+//  Note+CoreDataClass.swift
 //  NoteApp
 //
-//  Created by Nikita on 27/12/22.
+//  Created by Nikita on 29/12/22.
+//
 //
 
 import Foundation
+import CoreData
 
-class Note {
-    
-    let id = UUID()
-    var text: String = ""
-    var lastUpdated: Date = Date()
-    
+@objc(Note)
+public class Note: NSManagedObject {
+
     // Note's title
     var title: String {
         
@@ -23,13 +22,13 @@ class Note {
     }
     
     // Description of note's update time
-    var description: String {
+    public override var description: String {
         
         var lines = text
             .trimmingCharacters(in: .whitespacesAndNewlines)
             .components(separatedBy: .newlines)
         lines.removeFirst()
         
-        return "\(lastUpdated.format()) \(lines.first ?? "")"
+        return "\(lastUpdate.format()) \(lines.first ?? "")"
     }
 }

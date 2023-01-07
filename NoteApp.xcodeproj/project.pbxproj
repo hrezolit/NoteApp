@@ -11,13 +11,15 @@
 		D5692736295AF4DD00123D80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5692735295AF4DD00123D80 /* SceneDelegate.swift */; };
 		D5692738295AF4DD00123D80 /* MainPageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5692737295AF4DD00123D80 /* MainPageTableViewController.swift */; };
 		D569273B295AF4DD00123D80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5692739295AF4DD00123D80 /* Main.storyboard */; };
-		D569273E295AF4DD00123D80 /* NoteApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D569273C295AF4DD00123D80 /* NoteApp.xcdatamodeld */; };
 		D5692740295AF4DF00123D80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D569273F295AF4DF00123D80 /* Assets.xcassets */; };
 		D5692743295AF4DF00123D80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5692741295AF4DF00123D80 /* LaunchScreen.storyboard */; };
-		D5692750295B3EAD00123D80 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = D569274F295B3EAD00123D80 /* Note.swift */; };
 		D5692752295B400A00123D80 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5692751295B400A00123D80 /* Date+Extension.swift */; };
 		D5692754295B436F00123D80 /* MainPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5692753295B436F00123D80 /* MainPageTableViewCell.swift */; };
 		D5692757295B480C00123D80 /* EditPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5692756295B480C00123D80 /* EditPageViewController.swift */; };
+		D5FB60F9295D3DF400723AA9 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB60F8295D3DF400723AA9 /* CoreDataManager.swift */; };
+		D5FB60FF295D468600723AA9 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5FB60FD295D468600723AA9 /* Note.xcdatamodeld */; };
+		D5FB6102295D46D300723AA9 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB6100295D46D300723AA9 /* Note+CoreDataClass.swift */; };
+		D5FB6103295D46D300723AA9 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FB6101295D46D300723AA9 /* Note+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,14 +28,16 @@
 		D5692735295AF4DD00123D80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D5692737295AF4DD00123D80 /* MainPageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewController.swift; sourceTree = "<group>"; };
 		D569273A295AF4DD00123D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D569273D295AF4DD00123D80 /* NoteApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteApp.xcdatamodel; sourceTree = "<group>"; };
 		D569273F295AF4DF00123D80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D5692742295AF4DF00123D80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D5692744295AF4DF00123D80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D569274F295B3EAD00123D80 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		D5692751295B400A00123D80 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		D5692753295B436F00123D80 /* MainPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageTableViewCell.swift; sourceTree = "<group>"; };
 		D5692756295B480C00123D80 /* EditPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPageViewController.swift; sourceTree = "<group>"; };
+		D5FB60F8295D3DF400723AA9 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		D5FB60FE295D468600723AA9 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		D5FB6100295D46D300723AA9 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D5FB6101295D46D300723AA9 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +77,6 @@
 				D569274A295B3C3800123D80 /* Controller */,
 				D569274E295B3E2E00123D80 /* Extension */,
 				D569274D295B3C6300123D80 /* Resources */,
-				D569273C295AF4DD00123D80 /* NoteApp.xcdatamodeld */,
 			);
 			path = NoteApp;
 			sourceTree = "<group>";
@@ -98,7 +101,10 @@
 		D569274C295B3C4200123D80 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D569274F295B3EAD00123D80 /* Note.swift */,
+				D5FB6100295D46D300723AA9 /* Note+CoreDataClass.swift */,
+				D5FB6101295D46D300723AA9 /* Note+CoreDataProperties.swift */,
+				D5FB60F8295D3DF400723AA9 /* CoreDataManager.swift */,
+				D5FB60FD295D468600723AA9 /* Note.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -201,14 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5692750295B3EAD00123D80 /* Note.swift in Sources */,
 				D5692757295B480C00123D80 /* EditPageViewController.swift in Sources */,
+				D5FB60FF295D468600723AA9 /* Note.xcdatamodeld in Sources */,
+				D5FB6102295D46D300723AA9 /* Note+CoreDataClass.swift in Sources */,
 				D5692738295AF4DD00123D80 /* MainPageTableViewController.swift in Sources */,
 				D5692734295AF4DD00123D80 /* AppDelegate.swift in Sources */,
+				D5FB6103295D46D300723AA9 /* Note+CoreDataProperties.swift in Sources */,
 				D5692736295AF4DD00123D80 /* SceneDelegate.swift in Sources */,
-				D569273E295AF4DD00123D80 /* NoteApp.xcdatamodeld in Sources */,
 				D5692754295B436F00123D80 /* MainPageTableViewCell.swift in Sources */,
 				D5692752295B400A00123D80 /* Date+Extension.swift in Sources */,
+				D5FB60F9295D3DF400723AA9 /* CoreDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,13 +440,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D569273C295AF4DD00123D80 /* NoteApp.xcdatamodeld */ = {
+		D5FB60FD295D468600723AA9 /* Note.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D569273D295AF4DD00123D80 /* NoteApp.xcdatamodel */,
+				D5FB60FE295D468600723AA9 /* Note.xcdatamodel */,
 			);
-			currentVersion = D569273D295AF4DD00123D80 /* NoteApp.xcdatamodel */;
-			path = NoteApp.xcdatamodeld;
+			currentVersion = D5FB60FE295D468600723AA9 /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

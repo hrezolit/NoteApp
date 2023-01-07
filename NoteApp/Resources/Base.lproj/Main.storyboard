@@ -75,20 +75,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s9-5e-6Q5">
-                                            <rect key="frame" x="312" y="31.666666666666632" width="47" height="34.333333333333343"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
-                                            <connections>
-                                                <action selector="newNoteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddv-oE-mWQ"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="wBe-92-Gjf" firstAttribute="centerX" secondItem="pqa-DL-hNo" secondAttribute="centerX" id="3sJ-Qs-Cxs"/>
                                         <constraint firstItem="wBe-92-Gjf" firstAttribute="centerY" secondItem="pqa-DL-hNo" secondAttribute="centerY" id="6CS-dC-C7H"/>
-                                        <constraint firstAttribute="bottom" secondItem="3s9-5e-6Q5" secondAttribute="bottom" constant="31" id="9rd-n8-D7e"/>
-                                        <constraint firstAttribute="trailing" secondItem="3s9-5e-6Q5" secondAttribute="trailing" constant="34" id="hAD-tj-jiA"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
@@ -108,7 +98,19 @@
                             <constraint firstAttribute="bottom" secondItem="3gd-xg-j93" secondAttribute="bottom" id="vAU-WF-NZ1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Notes" id="6vz-jB-fRu"/>
+                    <navigationItem key="navigationItem" title="My Notes" id="6vz-jB-fRu">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="krg-GB-cNX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="3s9-5e-6Q5">
+                                <rect key="frame" x="16" y="5" width="355" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="newNoteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddv-oE-mWQ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="notesCountLabel" destination="wBe-92-Gjf" id="MkN-kC-N8e"/>
                         <outlet property="tableView" destination="7Xy-XO-HQT" id="wCq-Xk-32o"/>

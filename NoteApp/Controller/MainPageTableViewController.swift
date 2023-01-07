@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 protocol MainPageDelegate: AnyObject {
     func refreshNotes()
@@ -28,12 +29,14 @@ class MainPageViewController: UIViewController {
     
     private var filteredNotes: [Note] = []
     
+    //MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.shadowImage = UIImage()
         tableView.contentInset = .init(top: 0, left: 0, bottom: 30, right: 0)
         configureSearchBar()
+        fetchNotesFromStorage()
     }
     
     private func indexForNote(id: UUID, in list: [Note]) -> IndexPath {
@@ -61,9 +64,7 @@ class MainPageViewController: UIViewController {
     
     // MARK: - Methods to implement
     private func createNote() -> Note {
-        
-        let note = Note()
-               
+        let note = CoreDataManager.shared.createNote()
         // Update table view
         allNotes.insert(note, at: 0)
         tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
@@ -72,6 +73,8 @@ class MainPageViewController: UIViewController {
     }
     
     private func fetchNotesFromStorage() {
+        
+       allNotes = CoreDataManager.shared.fetchNotes()
         
     }
     
@@ -143,7 +146,7 @@ extension MainPageViewController: UISearchControllerDelegate, UISearchBarDelegat
 extension MainPageViewController: MainPageDelegate {
     
     func refreshNotes() {
-        allNotes = allNotes.sorted { $0.lastUpdated > $1.lastUpdated }
+        allNotes = allNotes.sorted(by: { $0.lastUpdate > $1.lastUpdate })
         tableView.reloadData()
     }
     
