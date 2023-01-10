@@ -40,6 +40,7 @@ class EditPageViewController: UIViewController {
     private func deleteNote() {
   
         delegate?.deleteNote(with: note.id)
+        CoreDataManager.shared.deleteNote(note )
     }
 }
 

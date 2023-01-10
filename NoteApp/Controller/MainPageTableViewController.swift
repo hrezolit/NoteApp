@@ -80,10 +80,12 @@ class MainPageViewController: UIViewController {
     
     private func deleteNoteFromStorage(_ note: Note) {
         deleteNote(with: note.id)
+        CoreDataManager.shared.deleteNote(note)
     }
     
     private func searchNotesFromStorage(_ text: String) {
-        
+        allNotes = CoreDataManager.shared.fetchNotes(filter: text)
+        tableView.reloadData()
     }
 }
 
