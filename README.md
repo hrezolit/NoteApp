@@ -1,8 +1,8 @@
 
 
-<h1 align="center"><img src="https://user-images.githubusercontent.com/62234354/217726942-49b1d484-3129-4824-b786-cc996cc7b61f.gif" 
+<h1 align="center"><img src="https://user-images.githubusercontent.com/62234354/217743689-abcfa083-4ac8-4192-9ffd-1267a358c10c.gif" 
      width="800", height="600"/></h1>
-     <h1 align="center">Hi there, I'm <a href="https://mobile.twitter.com/Hrezolitaz" target="_blank">Nik</a> 
+     <h1 align="center">Hi there, It's an greatest Note App! (like many others) </a> 
 <h3 align="center"> # NoteApp
-NoteApp is clone of Native Note app from Apple inc. 👨🏻‍💻, 
-
+NoteApp is clone of Native Note app from Apple inc. Testing, testing...!
+https://user-images.githubusercontent.com/62234354/217743824-546c47d5-1372-4431-8e71-96bffcc973bb.png
